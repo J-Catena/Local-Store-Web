@@ -1,6 +1,7 @@
 import Link from "next/link";
 import QuickContact from "@/components/QuickContact";
 import TopicPill from "@/components/TopicPill";
+import MapEmbed from "@/components/MapEmbed";
 import { getDictionary, normalizeLang } from "@/lib/getDictionary";
 
 function toTelHref(phone: string) {
@@ -10,11 +11,6 @@ function toTelHref(phone: string) {
 
 function toMailHref(email: string) {
     return `mailto:${email}`;
-}
-
-function toMapsHref(address: string) {
-    const q = encodeURIComponent(address);
-    return `https://www.google.com/maps/search/?api=1&query=${q}`;
 }
 
 export default async function Contacto({
@@ -60,7 +56,7 @@ export default async function Contacto({
 
                 <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                     <a
-                        className="rounded-3xl border border-zinc-200/70 bg-white p-5 shadow-sm transition hover:bg-zinc-50"
+                        className="rounded-3xl border border-zinc-200/70 bg-white p-5 shadow-sm transition hover:bg-zinc-50 hover:shadow-md"
                         href={toTelHref(company.phones.mobile)}
                     >
                         <p className="text-sm font-medium text-zinc-700">{c.phoneLabel}</p>
@@ -71,7 +67,7 @@ export default async function Contacto({
                     </a>
 
                     <a
-                        className="rounded-3xl border border-zinc-200/70 bg-white p-5 shadow-sm transition hover:bg-zinc-50"
+                        className="rounded-3xl border border-zinc-200/70 bg-white p-5 shadow-sm transition hover:bg-zinc-50 hover:shadow-md"
                         href={toMailHref(company.email)}
                     >
                         <p className="text-sm font-medium text-zinc-700">{c.emailLabel}</p>
@@ -79,8 +75,8 @@ export default async function Contacto({
                     </a>
 
                     <a
-                        className="rounded-3xl border border-zinc-200/70 bg-white p-5 shadow-sm transition hover:bg-zinc-50"
-                        href={toMapsHref(company.address)}
+                        className="rounded-3xl border border-zinc-200/70 bg-white p-5 shadow-sm transition hover:bg-zinc-50 hover:shadow-md"
+                        href={company.mapsLinkUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -94,10 +90,24 @@ export default async function Contacto({
                     </div>
                 </div>
 
+                {/* Ubicación */}
+                <div className="mt-10">
+                    <MapEmbed embedUrl={company.mapsEmbedUrl} title={company.name} />
+
+                    <a
+                        href={company.mapsLinkUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-3 inline-block text-sm font-semibold text-zinc-900 underline-offset-4 transition hover:text-(--brand) hover:underline"
+                    >
+                        {lang === "es" ? "Ver en Google Maps →" : "Open in Google Maps →"}
+                    </a>
+                </div>
+
                 <div className="mt-10">
                     <Link
                         href={`/${lang}`}
-                        className="text-sm font-semibold text-zinc-900 underline-offset-4 hover:underline"
+                        className="text-sm font-semibold text-zinc-900 underline-offset-4 transition hover:text-(--brand) hover:underline"
                     >
                         ← {dict.nav.home}
                     </Link>

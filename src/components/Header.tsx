@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import type { Dictionary, Lang } from "@/lib/getDictionary";
 
@@ -13,25 +14,58 @@ export default function Header({
 }) {
     const pathname = usePathname() || `/${lang}`;
 
-    // Mantener el resto de la ruta y cambiar solo el prefijo de idioma
+    
     const toEsPath = pathname.replace(/^\/(es|en)(?=\/|$)/, "/es");
     const toEnPath = pathname.replace(/^\/(es|en)(?=\/|$)/, "/en");
 
     return (
         <header className="border-b bg-white/80 backdrop-blur">
             <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-                <div className="flex items-center space-x-6 text-sm font-medium">
-                    <Link href={`/${lang}`} className="hover:underline">
-                        {dict.nav.home}
+
+                {/* Logo + navegación */}
+                <div className="flex items-center gap-8 text-sm font-medium">
+                    {/* Logo */}
+                    <Link
+                        href={`/${lang}`}
+                        aria-label={dict.company.name}
+                        className="flex items-center"
+                    >
+                        <Image
+                            src="/logo.png"
+                            alt={dict.company.name}
+                            width={154}
+                            height={40}
+                            className="h-10 w-auto object-contain"
+                            priority
+                        />
                     </Link>
-                    <Link href={`/${lang}/catalogo`} className="hover:underline">
-                        {dict.nav.catalogo}
-                    </Link>
-                    <Link href={`/${lang}/contacto`} className="hover:underline">
-                        {dict.nav.contacto}
-                    </Link>
+
+                    {/* Links */}
+                    <div className="flex items-center gap-6">
+                        <Link
+                            href={`/${lang}`}
+                            className="transition hover:text-(--brand) hover:underline"
+                        >
+                            {dict.nav.home}
+                        </Link>
+
+                        <Link
+                            href={`/${lang}/catalogo`}
+                            className="transition hover:text-(--brand) hover:underline"
+                        >
+                            {dict.nav.catalogo}
+                        </Link>
+
+                        <Link
+                            href={`/${lang}/contacto`}
+                            className="transition hover:text-(--brand) hover:underline"
+                        >
+                            {dict.nav.contacto}
+                        </Link>
+                    </div>
                 </div>
 
+                {/* Selector idioma */}
                 <div className="flex items-center space-x-2 text-sm">
                     <Link
                         href={toEsPath}
