@@ -50,7 +50,7 @@ export default async function Contacto({
                     ctaSecondary: c.ctaSecondary,
                 }}
                 lang={lang}
-                phone={company.phone}
+                phones={company.phones}
                 hours={company.hours}
                 id="contact-quick"
             />
@@ -60,15 +60,18 @@ export default async function Contacto({
 
                 <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                     <a
-                        className="rounded-3xl border border-zinc-200/70 bg-white p-5 shadow-sm hover:bg-zinc-50"
-                        href={toTelHref(company.phone)}
+                        className="rounded-3xl border border-zinc-200/70 bg-white p-5 shadow-sm transition hover:bg-zinc-50"
+                        href={toTelHref(company.phones.mobile)}
                     >
                         <p className="text-sm font-medium text-zinc-700">{c.phoneLabel}</p>
-                        <p className="mt-2 text-lg font-semibold">{company.phone}</p>
+                        <div className="mt-2 space-y-2">
+                            <p className="text-lg font-semibold">Móvil: {company.phones.mobile}</p>
+                            <p className="text-lg font-semibold">Fijo: {company.phones.landline}</p>
+                        </div>
                     </a>
 
                     <a
-                        className="rounded-3xl border border-zinc-200/70 bg-white p-5 shadow-sm hover:bg-zinc-50"
+                        className="rounded-3xl border border-zinc-200/70 bg-white p-5 shadow-sm transition hover:bg-zinc-50"
                         href={toMailHref(company.email)}
                     >
                         <p className="text-sm font-medium text-zinc-700">{c.emailLabel}</p>
@@ -76,7 +79,7 @@ export default async function Contacto({
                     </a>
 
                     <a
-                        className="rounded-3xl border border-zinc-200/70 bg-white p-5 shadow-sm hover:bg-zinc-50"
+                        className="rounded-3xl border border-zinc-200/70 bg-white p-5 shadow-sm transition hover:bg-zinc-50"
                         href={toMapsHref(company.address)}
                         target="_blank"
                         rel="noopener noreferrer"

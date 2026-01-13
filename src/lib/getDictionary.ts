@@ -14,11 +14,20 @@ export type Dictionary = {
 
   // Fuente única de datos de negocio
   company: {
-    phone: string;
+    name: string;
     email: string;
     address: string;
     hours: string;
+
+    phones: {
+      mobile: string;
+      landline: string;
+    };
+
+    mapsEmbedUrl: string;
+    mapsLinkUrl: string;
   };
+
 
   home: {
     title: string;
@@ -95,8 +104,12 @@ export type Dictionary = {
     ctaPrimary: string;
     ctaSecondary?: string;
 
-  
+
     topicLabel?: string;
+  };
+  seo: {
+    homeTitle: string;
+    homeDescription: string;
   };
 };
 

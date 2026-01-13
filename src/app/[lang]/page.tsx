@@ -3,6 +3,12 @@ import Services from "@/components/Services";
 import QuickContact from "@/components/QuickContact";
 import { getDictionary, normalizeLang } from "@/lib/getDictionary";
 
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+    return [{ lang: "es" }, { lang: "en" }];
+}
+
 export default async function LangHome({
     params,
 }: {
@@ -20,7 +26,7 @@ export default async function LangHome({
             <QuickContact
                 t={dict.home.quickContact}
                 lang={lang}
-                phone={dict.company.phone}
+                phones={dict.company.phones}
                 hours={dict.company.hours}
             />
         </main>

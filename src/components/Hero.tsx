@@ -1,5 +1,5 @@
-import Link from "next/link";
 import type { Dictionary, Lang } from "@/lib/getDictionary";
+import ButtonLink from "@/components/ButtonLink";
 
 export default function Hero({ lang, dict }: { lang: Lang; dict: Dictionary }) {
     return (
@@ -7,7 +7,7 @@ export default function Hero({ lang, dict }: { lang: Lang; dict: Dictionary }) {
             <div className="grid items-center gap-12 md:grid-cols-2">
                 {/* Texto */}
                 <div>
-                    <p className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-3 py-1 text-sm text-gray-700 shadow-sm">
+                    <p className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-3 py-1 text-sm text-gray-700 shadow-sm transition hover:border-[color:var(--brand)]/40">
                         <span className="h-2 w-2 rounded-full bg-green-600" />
                         {dict.home.trust}
                     </p>
@@ -36,25 +36,19 @@ export default function Hero({ lang, dict }: { lang: Lang; dict: Dictionary }) {
                     </ul>
 
                     <div className="mt-10 flex flex-wrap gap-4">
-                        <Link
-                            href={`/${lang}/catalogo`}
-                            className="rounded-xl bg-gray-900 px-6 py-3 text-sm font-medium text-white shadow-sm hover:opacity-90"
-                        >
+                        <ButtonLink href={`/${lang}/catalogo`} variant="primary">
                             {dict.home.ctaCatalogo}
-                        </Link>
+                        </ButtonLink>
 
-                        <Link
-                            href={`/${lang}/contacto`}
-                            className="rounded-xl border border-gray-200 bg-white px-6 py-3 text-sm font-medium text-gray-900 hover:bg-gray-50"
-                        >
+                        <ButtonLink href={`/${lang}/contacto`} variant="secondary">
                             {dict.home.ctaContacto}
-                        </Link>
+                        </ButtonLink>
                     </div>
                 </div>
 
                 {/* Visual */}
                 <div className="relative">
-                    <div className="overflow-hidden rounded-2xl border border-gray-200 bg-gray-900 shadow-sm">
+                    <div className="overflow-hidden rounded-2xl border border-gray-200 bg-gray-900 shadow-sm transition hover:shadow-md">
                         <div
                             className="relative h-[320px] w-full bg-cover bg-center md:h-[420px]"
                             style={{ backgroundImage: "url(/hero.jpeg)" }}
@@ -74,6 +68,7 @@ export default function Hero({ lang, dict }: { lang: Lang; dict: Dictionary }) {
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
     );

@@ -1,2 +1,6 @@
 @import "tailwindcss";
 
+:root {
+  --brand: #ff6a00;       /* STIHL orange */
+  --brand-hover: #e65f00; /* hover */
+}

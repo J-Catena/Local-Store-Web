@@ -8,11 +8,19 @@ export const es = {
   },
 
   company: {
-    phone: "+34 600 000 000",
-    email: "info@tudominio.com",
-    address: "Calle Ejemplo 123, Málaga",
-    hours: "L–V: 09:00–18:00",
+    name: "Europa Golf, tienda y servicio oficial Stihl",
+    phones: {
+      mobile: "+34 616492121",
+      landline: "+34 952182122",
+    },
+    email: "tiendastihlcabopino@gmail.com",
+    address: "CC/ Cabopino Local 13, 29604, Marbella",
+    hours: "L–V: 08:00–14:00",
+    mapsEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d348.86723839840573!2d-4.739456828308188!3d36.488811572471526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd73212926a86035%3A0xc90a941f84d37bfd!2sTienda%20especializada%20STIHL!5e1!3m2!1ses!2ses!4v1768292669690!5m2!1ses!2ses",
+    mapsLinkUrl: "https://maps.app.goo.gl/cxvpRFAci3PeBrsf6",
   },
+
 
   home: {
     title: "Tienda y servicio STIHL",
@@ -81,5 +89,10 @@ export const es = {
     ctaPrimary: "Escribir por email",
     ctaSecondary: "Llamar ahora",
     topicLabel: "Consulta sobre",
+  },
+  seo: {
+    homeTitle: "Venta y servicio",
+    homeDescription:
+      "Venta, recambios y mantenimiento. Atención rápida y profesional en Málaga.",
   },
 } as const;

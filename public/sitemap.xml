@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+  <url>
+    <loc>https://TU-DOMINIO-AQUI/es</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://TU-DOMINIO-AQUI/es" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://TU-DOMINIO-AQUI/en" />
+  </url>
+
+  <url>
+    <loc>https://TU-DOMINIO-AQUI/en</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://TU-DOMINIO-AQUI/es" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://TU-DOMINIO-AQUI/en" />
+  </url>
+
+  <url>
+    <loc>https://TU-DOMINIO-AQUI/es/catalogo</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://TU-DOMINIO-AQUI/es/catalogo" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://TU-DOMINIO-AQUI/en/catalogo" />
+  </url>
+
+  <url>
+    <loc>https://TU-DOMINIO-AQUI/en/catalogo</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://TU-DOMINIO-AQUI/es/catalogo" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://TU-DOMINIO-AQUI/en/catalogo" />
+  </url>
+
+  <url>
+    <loc>https://TU-DOMINIO-AQUI/es/contacto</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://TU-DOMINIO-AQUI/es/contacto" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://TU-DOMINIO-AQUI/en/contacto" />
+  </url>
+
+  <url>
+    <loc>https://TU-DOMINIO-AQUI/en/contacto</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://TU-DOMINIO-AQUI/es/contacto" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://TU-DOMINIO-AQUI/en/contacto" />
+  </url>
+</urlset>
