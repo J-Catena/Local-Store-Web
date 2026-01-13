@@ -48,14 +48,14 @@ export default function QuickContact({
 
                         <dl className="mt-6 grid gap-4 sm:grid-cols-2">
                             {/* TARJETA TELÉFONOS */}
-                            <div className="rounded-2xl border border-zinc-200/70 p-4 transition hover:border-[color:var(--brand)]/40 hover:bg-zinc-50">
+                            <div className="rounded-2xl border border-zinc-200/70 p-4 transition hover:border-(--brand)/40 hover:bg-zinc-50">
                                 <dt className="text-sm font-medium text-zinc-700">{t.phoneLabel}</dt>
 
                                 <dd className="mt-2 space-y-2">
                                     <div className="flex items-baseline justify-between gap-4">
                                         <span className="text-sm text-zinc-600">Móvil</span>
                                         <a
-                                            className="text-lg font-semibold underline-offset-4 hover:underline hover:text-[color:var(--brand)]"
+                                            className="text-lg font-semibold underline-offset-4 hover:underline hover:text-(--brand)"
                                             href={toTelHref(phones.mobile)}
                                         >
                                             {phones.mobile}
@@ -65,7 +65,7 @@ export default function QuickContact({
                                     <div className="flex items-baseline justify-between gap-4">
                                         <span className="text-sm text-zinc-600">Fijo</span>
                                         <a
-                                            className="text-lg font-semibold underline-offset-4 hover:underline hover:text-[color:var(--brand)]"
+                                            className="text-lg font-semibold underline-offset-4 hover:underline hover:text-(--brand)"
                                             href={toTelHref(phones.landline)}
                                         >
                                             {phones.landline}
@@ -75,7 +75,7 @@ export default function QuickContact({
                             </div>
 
                             {/* TARJETA HORARIO */}
-                            <div className="rounded-2xl border border-zinc-200/70 p-4 transition hover:border-[color:var(--brand)]/40 hover:bg-zinc-50">
+                            <div className="rounded-2xl border border-zinc-200/70 p-4 transition hover:border-(--brand)/40 hover:bg-zinc-50">
                                 <dt className="text-sm font-medium text-zinc-700">{t.hoursLabel}</dt>
                                 <dd className="mt-1 text-lg font-semibold text-zinc-900">{hours}</dd>
                             </div>
@@ -90,7 +90,7 @@ export default function QuickContact({
                         {t.ctaSecondary && primaryPhone ? (
                             <a
                                 href={toTelHref(primaryPhone)}
-                                className="inline-flex w-full items-center justify-center rounded-2xl border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 transition duration-200 hover:border-[color:var(--brand)] hover:text-[color:var(--brand)] hover:bg-zinc-50 md:w-auto"
+                                className="inline-flex w-full items-center justify-center rounded-2xl border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 transition duration-200 hover:border-(--brand) hover:text-(--brand) hover:bg-zinc-50 md:w-auto"
                             >
                                 {t.ctaSecondary}
                             </a>

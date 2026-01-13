@@ -7,7 +7,7 @@ export default function Hero({ lang, dict }: { lang: Lang; dict: Dictionary }) {
             <div className="grid items-center gap-12 md:grid-cols-2">
                 {/* Texto */}
                 <div>
-                    <p className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-3 py-1 text-sm text-gray-700 shadow-sm transition hover:border-[color:var(--brand)]/40">
+                    <p className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-3 py-1 text-sm text-gray-700 shadow-sm transition hover:border-(--brand)/40">
                         <span className="h-2 w-2 rounded-full bg-green-600" />
                         {dict.home.trust}
                     </p>
@@ -50,10 +50,10 @@ export default function Hero({ lang, dict }: { lang: Lang; dict: Dictionary }) {
                 <div className="relative">
                     <div className="overflow-hidden rounded-2xl border border-gray-200 bg-gray-900 shadow-sm transition hover:shadow-md">
                         <div
-                            className="relative h-[320px] w-full bg-cover bg-center md:h-[420px]"
+                            className="relative h-80 w-full bg-cover bg-center md:h-105"
                             style={{ backgroundImage: "url(/hero.jpeg)" }}
                         >
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/25 to-transparent" />
+                            <div className="absolute inset-0 bg-linear-to-t from-black/55 via-black/25 to-transparent" />
 
                             <div className="absolute bottom-0 left-0 right-0 p-6">
                                 <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur">

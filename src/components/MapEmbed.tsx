@@ -6,7 +6,7 @@ type Props = {
 export default function MapEmbed({ embedUrl, title = "Mapa" }: Props) {
     return (
         <div className="overflow-hidden rounded-3xl border border-zinc-200/70 bg-white shadow-sm">
-            <div className="aspect-[16/10] w-full">
+            <div className="aspect-16/10 w-full">
                 <iframe
                     title={title}
                     src={embedUrl}
