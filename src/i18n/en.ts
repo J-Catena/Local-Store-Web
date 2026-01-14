@@ -1,7 +1,7 @@
 export const en = {
   nav: {
     home: "Home",
-    catalogo: "Catalog",
+    catalogo: "Products & Advice",
     contacto: "Contact",
     langES: "ES",
     langEN: "EN",
@@ -56,25 +56,64 @@ export const en = {
   },
 
   catalogo: {
-    title: "Catalog",
-    subtitle: "Browse main categories. Looking for a specific model? We’ll advise you.",
-    categoriesTitle: "Categories",
-    categories: {
-      oneTitle: "Chainsaws",
-      oneDesc: "Home and professional use. Chains, bars and spare parts.",
-      oneCta: "Ask about chainsaws",
+    title: "Products & Advice",
+    subtitle:
+      "We are an official STIHL service partner. We help you choose the right solution and confirm availability in store.",
 
-      twoTitle: "Brushcutters",
-      twoDesc: "Gas and battery. Lines, blades and maintenance.",
-      twoCta: "Ask about brushcutters",
+    notice: {
+      title: "In-store sales with professional advice",
+      body:
+        "We don’t sell online. We guide you to the right equipment and products based on your needs, with official STIHL support.",
+      ctaLabel: "Ask for advice",
+      ctaTopic: "General product advice",
+    },
 
-      threeTitle: "Blowers",
-      threeDesc: "Garden and professional cleanup. Accessories and spares.",
-      threeCta: "Ask about blowers",
+    howItWorks: {
+      title: "How we work",
+      steps: [
+        { title: "Tell us what you need", desc: "Describe the job, frequency and environment." },
+        { title: "We recommend the right solution", desc: "STIHL equipment and complementary products." },
+        { title: "We confirm availability", desc: "We check stock and options before your visit." },
+      ],
+    },
 
-      fourTitle: "Spare parts & consumables",
-      fourDesc: "Chains, oils, filters, spark plugs and original parts.",
-      fourCta: "Ask about spare parts",
+    categoriesTitle: "Areas of products and service",
+    categoriesIntro:
+      "These areas are for guidance. We provide personalised advice and confirm availability in store.",
+
+    areas: {
+      oneTitle: "STIHL machinery",
+      oneDesc:
+        "Chainsaws, brushcutters, blowers, mowers and battery systems. We help you choose the right model for your use.",
+      oneCta: "Ask about machinery",
+      oneTopic: "STIHL machinery",
+
+      twoTitle: "Garden & soil care",
+      twoDesc:
+        "Fertilisers, seeds and seasonal products for garden, orchard and green areas. Recommendations based on terrain and season.",
+      twoCta: "Ask about garden products",
+      twoTopic: "Garden products",
+
+      threeTitle: "Maintenance, parts & consumables",
+      threeDesc:
+        "Oils, chains, filters, spark plugs, lubricants and original spare parts to keep your equipment in top condition.",
+      threeCta: "Ask about maintenance",
+      threeTopic: "Maintenance and spare parts",
+
+      fourTitle: "Advice & official service",
+      fourDesc:
+        "Official STIHL service, setup, support and post-sale guidance. We help you keep everything running properly.",
+      fourCta: "Talk to service",
+      fourTopic: "Official service and advice",
+    },
+
+    transparency: {
+      title: "Important information",
+      bullets: [
+        "This website does not offer online sales or pricing.",
+        "Availability depends on stock and supplier conditions.",
+        "We work with official STIHL products and a curated complementary selection.",
+      ],
     },
   },
 

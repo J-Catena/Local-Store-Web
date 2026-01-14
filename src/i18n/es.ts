@@ -1,7 +1,7 @@
 export const es = {
   nav: {
     home: "Inicio",
-    catalogo: "Catálogo",
+    catalogo: "Productos y asesoramiento",
     contacto: "Contacto",
     langES: "ES",
     langEN: "EN",
@@ -56,25 +56,64 @@ export const es = {
   },
 
   catalogo: {
-    title: "Catálogo",
-    subtitle: "Explora las categorías principales. Si buscas un modelo concreto, te asesoramos.",
-    categoriesTitle: "Categorías",
-    categories: {
-      oneTitle: "Motosierras",
-      oneDesc: "Uso doméstico y profesional. Cadenas, espadas y recambios.",
-      oneCta: "Consultar motosierras",
+    title: "Productos y asesoramiento",
+    subtitle:
+      "Somos Servicio Oficial STIHL. Te ayudamos a elegir la solución adecuada y confirmamos disponibilidad en tienda.",
 
-      twoTitle: "Desbrozadoras",
-      twoDesc: "Gasolina y batería. Hilos, discos y mantenimiento.",
-      twoCta: "Consultar desbrozadoras",
+    notice: {
+      title: "Venta en tienda con asesoramiento profesional",
+      body:
+        "No realizamos venta online. Te orientamos según tus necesidades, con soporte oficial STIHL y selección de productos complementarios.",
+      ctaLabel: "Solicitar asesoramiento",
+      ctaTopic: "Asesoramiento general de productos",
+    },
 
-      threeTitle: "Sopladores",
-      threeDesc: "Jardín y trabajo. Accesorios y repuestos.",
-      threeCta: "Consultar sopladores",
+    howItWorks: {
+      title: "Cómo trabajamos",
+      steps: [
+        { title: "Cuéntanos qué necesitas", desc: "Tipo de trabajo, frecuencia y entorno." },
+        { title: "Te recomendamos la mejor solución", desc: "Maquinaria STIHL y productos complementarios." },
+        { title: "Confirmamos disponibilidad", desc: "Comprobamos stock y opciones antes de tu visita." },
+      ],
+    },
 
-      fourTitle: "Recambios y consumibles",
-      fourDesc: "Cadenas, aceites, filtros, bujías y piezas originales.",
-      fourCta: "Consultar recambios",
+    categoriesTitle: "Áreas de producto y servicio",
+    categoriesIntro:
+      "Estas áreas son orientativas. Te asesoramos de forma personalizada y confirmamos disponibilidad en tienda.",
+
+    areas: {
+      oneTitle: "Maquinaria STIHL",
+      oneDesc:
+        "Motosierras, desbrozadoras, sopladores, cortacéspedes y sistemas a batería. Te ayudamos a elegir el modelo adecuado según tu uso.",
+      oneCta: "Consultar maquinaria",
+      oneTopic: "Maquinaria STIHL",
+
+      twoTitle: "Jardín y cuidado del terreno",
+      twoDesc:
+        "Abonos, semillas y productos de temporada para jardín, huerto y zonas verdes. Recomendación según terreno y época del año.",
+      twoCta: "Consultar productos de jardín",
+      twoTopic: "Productos de jardín",
+
+      threeTitle: "Mantenimiento, recambios y consumibles",
+      threeDesc:
+        "Aceites, cadenas, filtros, bujías, lubricantes y recambio original para mantener tu maquinaria en perfecto estado.",
+      threeCta: "Consultar mantenimiento",
+      threeTopic: "Mantenimiento y recambios",
+
+      fourTitle: "Asesoramiento y servicio oficial",
+      fourDesc:
+        "Servicio técnico oficial STIHL, puesta a punto, soporte y orientación postventa. Te ayudamos a que todo funcione como debe.",
+      fourCta: "Hablar con el servicio técnico",
+      fourTopic: "Servicio técnico y asesoramiento",
+    },
+
+    transparency: {
+      title: "Información importante",
+      bullets: [
+        "Esta web no realiza venta online ni muestra precios.",
+        "La disponibilidad depende del stock y condiciones del proveedor.",
+        "Trabajamos con producto oficial STIHL y una selección de artículos complementarios.",
+      ],
     },
   },
 

@@ -69,26 +69,53 @@ export type Dictionary = {
   catalogo: {
     title: string;
     subtitle: string;
-    categoriesTitle: string;
 
-    categories: {
+    notice: {
+      title: string;
+      body: string;
+      ctaLabel: string;
+      ctaTopic: string;
+    };
+
+    howItWorks: {
+      title: string;
+      steps: ReadonlyArray<{
+        title: string;
+        desc: string;
+      }>;
+    };
+
+    categoriesTitle: string;
+    categoriesIntro: string;
+
+    areas: {
       oneTitle: string;
       oneDesc: string;
       oneCta: string;
+      oneTopic: string;
 
       twoTitle: string;
       twoDesc: string;
       twoCta: string;
+      twoTopic: string;
 
       threeTitle: string;
       threeDesc: string;
       threeCta: string;
+      threeTopic: string;
 
       fourTitle: string;
       fourDesc: string;
       fourCta: string;
+      fourTopic: string;
+    };
+
+    transparency: {
+      title: string;
+      bullets: ReadonlyArray<string>;
     };
   };
+
 
   contacto: {
     title: string;
