@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { getDictionary, normalizeLang, type Lang } from "@/lib/getDictionary";
 
 export const dynamicParams = false;
@@ -78,9 +79,16 @@ export default async function LangLayout({
     const dict = await Promise.resolve(getDictionary(lang));
 
     return (
-        <section lang={lang} data-lang={lang}>
+        <section lang={lang} data-lang={lang} className="min-h-screen bg-zinc-50 text-zinc-900">
             <Header lang={lang} dict={dict} />
-            {children}
+
+            <main>{children}</main>
+
+            <Footer
+                lang={lang}
+                company={dict.company}
+                portfolioUrl="https://juancatena.vercel.app/"
+            />
         </section>
     );
 }
